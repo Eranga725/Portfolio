@@ -3,7 +3,7 @@ import styles from './style.module.css'
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'    
 
 export default function Landing() {
     const firstText = useRef(null);

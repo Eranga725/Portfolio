@@ -55,10 +55,7 @@
 }
 
 /* ------------------------- */
-/*       RESPONSIVE FIX      */
-/* ------------------------- */
-
-@media (max-width: 768px) {
+/*       @media (max-width: 768px) {
 
   .main {
     height: 70vh;
@@ -89,4 +86,36 @@
     font-size: 16px;
     left: 55%;
   }
+}      */
+/* ------------------------- */
+
+
+
+@media (max-width: 768px) {
+  .slider p {
+    font-size: 90px;
+  }
+
+  .description {
+    top: 50%;
+    left: 10%;
+    font-size: 18px;
+  }
+
+  .main {
+    height: 100vh;
+  }
 }
+
+@media (max-width: 480px) {
+  .slider p {
+    font-size: 60px;
+  }
+
+  .description {
+    top: 55%;
+    left: 8%;
+    font-size: 16px;
+  }
+}
+

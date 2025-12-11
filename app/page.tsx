@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import { useRef } from 'react';
 import Landing from './components/Landing';
+import Projects from './components/Projects';
 
 export default function Home() {
   const firstText = useRef(null);
@@ -20,6 +21,7 @@ useEffect(() => {
     
     <main>
       <Landing />
+      <Projects />
       {/* <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>

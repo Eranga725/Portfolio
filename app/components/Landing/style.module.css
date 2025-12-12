@@ -92,6 +92,17 @@
 
 
 @media (max-width: 768px) {
+  .main {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    margin-bottom: 100vh;
+    overflow: hidden;
+  }
+  
+  .main img {
+    object-fit: cover;
+  }
   .slider p {
     font-size: 90px;
   }
@@ -108,6 +119,17 @@
 }
 
 @media (max-width: 480px) {
+  .main {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    margin-bottom: 100vh;
+    overflow: hidden;
+  }
+  
+  .main img {
+    object-fit: cover;
+  }
   .slider p {
     font-size: 60px;
   }

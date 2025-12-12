@@ -7,28 +7,28 @@ import Modal from './components_modal';
 const projects = [
   {
     title: "Tesbious",
-    src: "./public/images/background.jpg",
+    src: "/images/Screenshot 2025-12-12 224938.png",
     color: "#000000",
     url: "https://www.tesbious.com/",
     description: "Design & Development"
   },
   {
     title: "sasa portfolio",
-    src: "officestudio.png",
+    src: "/images/Screenshot 2025-12-12 224807.png",
     color: "#8C8C8C",
-    url: "",
+    url: "https://google.com", // just for testing, put your url
     description: "UI/UX Portfolio"
   },
   {
     title: "stock market app",
-    src: "locomotive.png",
+    src: "/images/locomotive.png",
     color: "#EFE8D3",
     url: "/stock-market-app",
     description: "Finance App"
   },
   {
     title: "wedd ui",
-    src: "silencio.png",
+    src: "/images/silencio.png",
     color: "#706D63",
     url: "/wedd-ui",
     description: "Wedding UI Design"
@@ -41,16 +41,17 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.body}>
-        {projects.map((project, index) => (
+        {projects.map((project, i) => (
           <Project
-            key={index}
-            index={index}
+            key={i}
+            index={i}
             title={project.title}
-            description={project.description} // pass description
+            description={project.description}
             setModal={setModal}
           />
         ))}
       </div>
+
       <Modal modal={modal} projects={projects} />
     </main>
   );

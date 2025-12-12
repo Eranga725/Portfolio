@@ -1,17 +1,16 @@
 'use client';
-import React from 'react';
 import styles from './style.module.css';
 
-export default function Project({ index, title, description, setModal }) {
+export default function Project({ title, description, index, setModal }) {
   return (
     <div
+      className={styles.project}
       onMouseEnter={() => setModal({ active: true, index })}
       onMouseLeave={() => setModal({ active: false, index })}
-      className={styles.project}
-      style={{ cursor: 'pointer' }}
+      onClick={() => setModal({ active: true, index })}  // <-- FIXED
     >
       <h2>{title}</h2>
-      <p>{description}</p> {/* Display project description */}
+      <p>{description}</p>
     </div>
   );
 }

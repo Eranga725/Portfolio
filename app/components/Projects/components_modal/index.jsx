@@ -2,18 +2,28 @@
 import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './style.module.css';
 import gsap from 'gsap';
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
-  enter: { scale: 1, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] } },
-  closed: { scale: 0, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] } }
+  enter: {
+    scale: 1,
+    x: "-50%",
+    y: "-50%",
+    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] }
+  },
+  closed: {
+    scale: 0,
+    x: "-50%",
+    y: "-50%",
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] }
+  }
 };
 
 export default function Modal({ modal, projects }) {
   const { active, index } = modal;
+
   const modalContainer = useRef(null);
   const cursor = useRef(null);
   const cursorLabel = useRef(null);
@@ -36,52 +46,58 @@ export default function Modal({ modal, projects }) {
       yMoveCursorLabel(pageY);
     };
 
-    window.addEventListener('mousemove', moveHandler);
-    return () => window.removeEventListener('mousemove', moveHandler);
+    window.addEventListener("mousemove", moveHandler);
+    return () => window.removeEventListener("mousemove", moveHandler);
   }, []);
 
+  // 💥 FINAL BUG-FIXED NAVIGATION FUNCTION
   const navigateToProject = () => {
-    if (!projects[index]?.url) return;
+    const url = projects[index]?.url;
 
-    const url = projects[index].url;
-    if (url.startsWith('http')) {
-      window.open(url, "_blank");
+    if (!url || url === "") return;
+
+    if (url.startsWith("http")) {
+      window.open(url, "_blank", "noopener,noreferrer");
     } else {
-      window.location.href = url; // internal route using full reload, safer in modal
+      window.location.assign(url);
     }
   };
 
   return (
     <>
-      {/* Modal container */}
+      {/* MAIN MODAL CLICK — WORKS NOW */}
       <motion.div
         ref={modalContainer}
+        className={styles.modalContainer}
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className={styles.modalContainer}
-        onClick={navigateToProject} // click anywhere navigates
-        style={{ cursor: projects[index]?.url ? 'pointer' : 'default' }}
+        onClick={navigateToProject}
+        style={{ pointerEvents: active ? "auto" : "none", cursor: "pointer" }}
       >
-        <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
+        <div
+          style={{ top: index * -100 + "%" }}
+          className={styles.modalSlider}
+        >
           {projects.map((project, i) => (
             <div
+              key={i}
               className={styles.modal}
               style={{ backgroundColor: project.color }}
-              key={`modal_${i}`}
             >
               <Image
-                src={`/images/${project.src}`}
-                width={300}
-                height={0}
+                src={project.src}
                 alt={project.title}
+                width={300}
+                height={200}
+                priority
               />
             </div>
           ))}
         </div>
       </motion.div>
 
-      {/* Floating cursor */}
+      {/* CURSOR */}
       <motion.div
         ref={cursor}
         className={styles.cursor}
@@ -90,18 +106,18 @@ export default function Modal({ modal, projects }) {
         animate={active ? "enter" : "closed"}
       />
 
-      {/* View button */}
+      {/* VIEW BUTTON — ALSO WORKS NOW */}
       <motion.div
         ref={cursorLabel}
         className={styles.cursorLabel}
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        style={{ cursor: 'pointer' }}
         onClick={(e) => {
-          e.stopPropagation(); // prevent double navigation
+          e.stopPropagation(); // avoid modal double fire
           navigateToProject();
         }}
+        style={{ cursor: "pointer" }}
       >
         View
       </motion.div>

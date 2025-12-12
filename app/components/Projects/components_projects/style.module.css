@@ -1,38 +1,92 @@
-.project{
+.project {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 100px 50px 100px;
-    border-top:1px solid rgb(201,201,201);
+    padding: 50px 100px;
+    border-top: 1px solid rgb(201,201,201);
     cursor: pointer;
     transition: all 0.2s;
 }
 
-.project:last-of-type{
-    border-bottom:1px solid rgb(201,201,201);
+.project:last-of-type {
+    border-bottom: 1px solid rgb(201,201,201);
 }
 
-.project:hover{
+.project:hover {
     opacity: 0.5;
 }
 
-.project:hover h2{
+.project:hover h2 {
     transform: translateX(-10px);
 }
 
-.project:hover p{
+.project:hover p {
     transform: translateX(10px);
 }
 
-.project h2{
+.project h2 {
     font-size: 60px;
-    margin: 0px;
+    margin: 0;
     font-weight: 400;
     transition: all 0.4s;
 }
 
-.project p{
+.project p {
     transition: all 0.4s;
     font-weight: 300;
+}
+
+/* RESPONSIVE STYLES */
+
+/* Medium screens: tablets, landscape phones */
+@media (max-width: 1024px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 50px;
+    }
+
+    .project h2 {
+        font-size: 48px;
+    }
+
+    .project p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+/* Small screens: portrait phones */
+@media (max-width: 768px) {
+    .project {
+        padding: 30px 20px;
+        align-items: center;
+
+    }
+
+    .project h2 {
+        font-size: 36px;
+    }
+
+    .project p {
+        font-size: 16px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .project {
+        padding: 20px 15px;
+        align-items: center;
+
+    }
+
+    .project h2 {
+        font-size: 28px;
+    }
+
+    .project p {
+        font-size: 14px;
+    }
 }

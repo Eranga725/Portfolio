@@ -1,8 +1,8 @@
-'use client';
-import styles from './page.module.css';
-import { useState } from 'react';
-import Project from './components_projects';
-import Modal from './components_modal';
+"use client"
+import styles from "./page.module.css"
+import { useState } from "react"
+import Project from "./components_projects"
+import Modal from "./components_modal"
 
 const projects = [
   {
@@ -10,33 +10,33 @@ const projects = [
     src: "/images/Screenshot 2025-12-12 224938.png",
     color: "#000000",
     url: "https://www.tesbious.com/",
-    description: "Design & Development"
+    description: "Design & Development",
   },
   {
     title: "sasa portfolio",
     src: "/images/Screenshot 2025-12-12 224807.png",
     color: "#8C8C8C",
-    url: "https://google.com", // just for testing, put your url
-    description: "UI/UX Portfolio"
+    url: "https://google.com",
+    description: "UI/UX Portfolio",
   },
   {
     title: "stock market app",
     src: "/images/locomotive.png",
     color: "#EFE8D3",
     url: "/stock-market-app",
-    description: "Finance App"
+    description: "Finance App",
   },
   {
     title: "wedd ui",
     src: "/images/silencio.png",
     color: "#706D63",
     url: "/wedd-ui",
-    description: "Wedding UI Design"
-  }
-];
+    description: "Wedding UI Design",
+  },
+]
 
 export default function Home() {
-  const [modal, setModal] = useState({ active: false, index: 0 });
+  const [modal, setModal] = useState({ active: false, index: 0 })
 
   return (
     <main className={styles.main}>
@@ -47,6 +47,7 @@ export default function Home() {
             index={i}
             title={project.title}
             description={project.description}
+            src={project.src}
             setModal={setModal}
           />
         ))}
@@ -54,5 +55,5 @@ export default function Home() {
 
       <Modal modal={modal} projects={projects} />
     </main>
-  );
+  )
 }

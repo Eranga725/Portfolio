@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     
-    font-family: var(--font-inter), sans-serif; /* Hide scrollbars */
-    /* cursor: wait; Add after Preloader*/
+    font-family: var(--font-inter), sans-serif;     /* cursor: wait; Add after Preloader*/
+    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-y: auto;   /* allow vertical scroll */
 }

@@ -54,90 +54,71 @@
   margin-bottom: 10px;
 }
 
-/* ------------------------- */
-/*       @media (max-width: 768px) {
-
-  .main {
-    height: 70vh;
-    margin-bottom: 60vh;
+/* Improved responsive layout for tablets */
+@media (max-width: 768px) {
+  .sliderContainer {
+    top: calc(100vh - 250px);
   }
 
+  .slider p {
+    font-size: 120px;
+    padding-right: 30px;
+  }
 
   .description {
-    top: 60%;
-    left: 30%;
-    width: 80%;
-    font-size: 18px;
+    top: 45%;
+    left: 60%;
+    font-size: 20px;
+  }
+
+  .description svg {
+    transform: scale(1.8);
+    margin-bottom: 8px;
+  }
+}
+
+/* Optimized responsive layout for mobile devices */
+@media (max-width: 480px) {
+  .sliderContainer {
+    top: calc(100vh - 180px);
+  }
+
+  .slider p {
+    font-size: 70px;
+    padding-right: 20px;
+  }
+
+  .description {
+    top: 50%;
+    left: 10%;
+    font-size: 16px;
   }
 
   .description svg {
     transform: scale(1.5);
+    margin-bottom: 6px;
+  }
+}
+
+/* Extra small screens optimization */
+@media (max-width: 380px) {
+  .sliderContainer {
+    top: calc(100vh - 150px);
+  }
+
+  .slider p {
+    font-size: 50px;
+    padding-right: 15px;
+  }
+
+  .description {
+    top: 55%;
+    left: 8%;
+    font-size: 14px;
+  }
+
+  .description svg {
+    transform: scale(1.3);
     margin-bottom: 5px;
   }
 }
-
-@media (max-width: 480px) {
-
-  .slider p {
-    font-size: 55px;
-  }
-
-  .description {
-    font-size: 16px;
-    left: 55%;
-  }
-}      */
-/* ------------------------- */
-
-
-
-@media (max-width: 768px) {
-  .main {
-    position: relative;
-    display: flex;
-    height: 100vh;
-    margin-bottom: 100vh;
-    overflow: hidden;
-  }
-  
-  .main img {
-    object-fit: cover;
-  }
-  .slider p {
-    font-size: 90px;
-  }
-
-  .description {
-    top: 80%;
-    left: 69%;
-    font-size: 18px;
-  }
-
-  .main {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .main {
-    position: relative;
-    display: flex;
-    height: 100vh;
-    margin-bottom: 100vh;
-    overflow: hidden;
-  }
-  
-  .main img {
-    object-fit: cover;
-  }
-  .slider p {
-    font-size: 60px;
-  }
-
-  .description {
-    top: 75%;
-    left: 8%;
-    font-size: 16px;
-  }
-}
-

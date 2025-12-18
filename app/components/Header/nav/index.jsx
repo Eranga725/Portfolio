@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react'
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
@@ -28,7 +26,7 @@ const navItems = [
   },
 ]
 
-export default function Nav() {
+export default function index() {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);

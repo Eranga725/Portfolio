@@ -13,7 +13,6 @@
     justify-content: center;
   }
   
-  /* Make container responsive for mobile card layout */
   @media (max-width: 1024px) {
     .main {
       height: auto;

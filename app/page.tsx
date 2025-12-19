@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import Landing from './components/Landing';
 import Projects from './components/Projects';
 import Description from './components/description';
+import Slider from './components/slider';
+import Contact from './components/Contact';
 
 export default function Home() {
 
@@ -22,6 +24,8 @@ useEffect(() => {
       <Landing />
       <Description />
       <Projects />
+      <Slider />
+      <Contact />
       
       {/* <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}

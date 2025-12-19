@@ -1,4 +1,5 @@
 "use client"
+import RoundedButton from "../../common/RoundedButton"
 import styles from "./style.module.css"
 import Image from "next/image"
 
@@ -30,6 +31,8 @@ export default function Project({ title, description, index, setModal, src }) {
           <span className={styles.projectYear}>2024</span>
         </div>
       </div>
+      
     </div>
+            
   )
 }

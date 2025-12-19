@@ -3,6 +3,7 @@ import styles from "./page.module.css"
 import { useState } from "react"
 import Project from "./components_projects"
 import Modal from "./components_modal"
+import RoundedButton from "../common/RoundedButton"
 
 const projects = [
   {
@@ -51,6 +52,12 @@ export default function Home() {
             setModal={setModal}
           />
         ))}
+
+        <div className={styles.moreWorkButton}>
+          <RoundedButton>
+            <p>More work</p>
+          </RoundedButton>
+        </div>
       </div>
 
       <Modal modal={modal} projects={projects} />

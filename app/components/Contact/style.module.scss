@@ -159,68 +159,121 @@
     font-size: 1em;
   }
   
-  /* Adding mobile responsive styles to fix excessive spacing */
-  @media (max-width: 768px) {
-    .contact .body {
-      padding-top: 60px;
-    }
-  
-    .contact .body .title {
-      margin-left: 20px;
-      margin-right: 20px;
-      padding-bottom: 50px;
-    }
-  
-    .contact .body .title h2 {
-      font-size: 10vw;
-    }
-  
-    .contact .body .title span .imageContainer {
-      width: 60px;
-      height: 60px;
-    }
-  
-    .contact .body .title .buttonContainer {
-      position: relative;
-      left: 0;
-      top: 30px;
-      margin-top: 30px;
-    }
-  
-    .contact .body .title .buttonContainer .button {
-      width: 140px;
-      height: 140px;
-      position: relative;
-    }
-  
-    .contact .body .title .buttonContainer .button p {
-      font-size: 14px;
-    }
-  
-    .contact .body .title svg {
-      display: none;
-    }
-  
-    .contact .body .nav {
-      flex-direction: column;
-      margin-top: 50px;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-  
-    .contact .body .info {
-      flex-direction: column;
-      gap: 30px;
-      margin-top: 30px;
-      padding: 20px;
-    }
-  
-    .contact .body .info div {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
+/* Updated mobile responsive styles to match reference image with proper version, time, and social links layout */
+@media (max-width: 768px) {
+  .contact .curve {
+    height: 80px;
+  }
 
-      /*ammmo*/
-    }
+  .contact {
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact .body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .contact .body .title {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 40px;
+  }
+
+  .contact .body .title h2 {
+    font-size: 9vw;
+    font-weight: 400;
+  }
+
+  .contact .body .title span .imageContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact .body .title .buttonContainer {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: calc(100% - 70px);
+    margin-top: 0;
   }
   
+  .contact .body .title .buttonContainer .button {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    
+/*    width: 140px;
+    height: 140px;
+    position: relative;*/
+  }
+
+  .contact .body .title .buttonContainer .button p {
+    font-size: 13px;
+  }
+
+  .contact .body .title svg {
+    display: none;
+  }
+
+  .contact .body .nav {
+    flex-direction: column;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 15px;
+  }
+
+  .contact .body .info {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 0 20px 40px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact .body .info > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .contact .body .info > div:first-child {
+    order: 1;
+  }
+
+  .contact .body .info > div:last-child {
+    order: 2;
+  }
+
+  /* Show local time on mobile */
+  .contact .body .info .localTime {
+    display: flex;
+  }
+
+  /* Social links horizontal layout on mobile */
+  .contact .body .info .socialLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .contact .body .info div span {
+    gap: 15px;
+    width: 100%;
+  }
+
+  .contact .body .info div h3 {
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+  }
+
+  .contact .body .info div p {
+    font-size: 1em;
+  }
+}

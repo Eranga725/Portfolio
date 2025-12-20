@@ -1,11 +1,14 @@
 import styles from './style.module.scss';
 import Image from 'next/image';
 import Rounded from '../common/RoundedButton';
-import { useRef } from 'react';
+import { useRef,useEffect,useState } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import Magnetic from '../common/Magnetic';
 
 export default function CONTACT() {
+
+    const [currentTime, setCurrentTime] = useState("")
+
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -14,6 +17,22 @@ export default function CONTACT() {
     const x = useTransform(scrollYProgress, [0, 1], [0, 100])
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
+
+    useEffect(() => {
+        const updateTime = () => {
+          const now = new Date()
+          const hours = now.getHours().toString().padStart(2, "0")
+          const minutes = now.getMinutes().toString().padStart(2, "0")
+          const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+          setCurrentTime(`${hours}:${minutes} ${timeZone}`)
+        }
+    
+        updateTime()
+        const interval = setInterval(updateTime, 60000)
+        return () => clearInterval(interval)
+      }, [])
+
+
     return (
         <motion.div style={{y}} ref={container} className={styles.contact}>
             <div className={styles.body}>
@@ -52,6 +71,10 @@ export default function CONTACT() {
                             <h3>Version</h3>
                             <p>2022 © Edition</p>
                         </span>
+                        <span className={styles.localTime}>
+                         <h3>Local Time</h3>
+                         <p>{currentTime}</p>
+                         </span>
                     </div>
                     <div>
                         <span>

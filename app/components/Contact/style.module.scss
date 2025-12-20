@@ -70,7 +70,7 @@
   .contact .body .title .buttonContainer {
     position: absolute;
     left: calc(100% - 400px);
-    top: calc(100% - 75px);
+    top: calc(100% - 105px);
   }
   
   .contact .body .title .buttonContainer .button {
@@ -167,6 +167,7 @@
 
   .contact {
     margin-top: 0;
+    margin-bottom: auto;
     position: relative;
     z-index: 1;
   }
@@ -194,15 +195,16 @@
 
   .contact .body .title .buttonContainer {
     position: absolute;
-    right: 0;
+    right:100px;
+    margin-bottom: 40px;
     left: auto;
     top: calc(100% - 70px);
     margin-top: 0;
   }
   
   .contact .body .title .buttonContainer .button {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     position: relative;
     
 /*    width: 140px;

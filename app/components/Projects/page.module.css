@@ -1,9 +1,11 @@
 .main {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   margin-bottom: 250px;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .body {
@@ -14,6 +16,20 @@
   justify-content: center;
 }
 
+/* Added styles for RECENT WORK header section */
+.header {
+  width: 1000px;
+  margin-bottom: 20px;
+}
+
+.headerLabel {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
 
 /* Add styling for the More work button container */
 .moreWorkButton {

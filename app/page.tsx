@@ -22,10 +22,16 @@ useEffect(() => {
     
     <main>
       <Landing />
-      <Description />
-      <Projects />
+      <div id="about">
+        <Description />
+      </div>
+      <div id="work">
+        <Projects />
+      </div>
       <Slider />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
       
       {/* <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}

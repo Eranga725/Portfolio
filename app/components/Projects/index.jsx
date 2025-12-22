@@ -41,9 +41,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-        <div className={styles.header}>
-        <p className={styles.headerLabel}>RECENT WORK</p>
-      </div>
+
+
+
 
       <div className={styles.body}>
         {projects.map((project, i) => (

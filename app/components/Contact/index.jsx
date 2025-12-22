@@ -26,7 +26,7 @@ export default function CONTACT() {
           const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
           setCurrentTime(`${hours}:${minutes} ${timeZone}`)
         }
-    
+
         updateTime()
         const interval = setInterval(updateTime, 60000)
         return () => clearInterval(interval)
@@ -69,7 +69,7 @@ export default function CONTACT() {
                     <div>
                         <span>
                             <h3>Version</h3>
-                            <p>2025 © Edition</p>
+                            <p>2022 © Edition</p>
                         </span>
                         <span className={styles.localTime}>
                          <h3>Local Time</h3>
@@ -93,5 +93,4 @@ export default function CONTACT() {
                 </div>
             </div>
         </motion.div>
-    )
-}
+    )}

@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 
 export default function Home() {
 
-  
+
 
 useEffect(() => {
   (async () => {
@@ -19,20 +19,20 @@ useEffect(() => {
 
 
   return (
-    
+
     <main>
       <Landing />
-      <div id="about">
-        <Description />
-      </div>
-      <div id="work">
-        <Projects />
-      </div>
+      <Description />
+      <Projects />
+
+
+
+
       <Slider />
-      <div id="contact">
-        <Contact />
-      </div>
-      
+      <Contact />
+
+
+
       {/* <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>

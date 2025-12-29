@@ -1,37 +1,42 @@
 .main {
   display: flex;
-
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
   margin-bottom: 250px;
   align-items: center;
   justify-content: center;
-
+  z-index: 2;
 }
 
+/* Main content container */
 .body {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+/* Header section */
+.header {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  color: #595555;
+}
 
+/* Header label text */
+.headerLabel {
+  font-size: 14px;
+  font-weight: 400;
+  color: #595555;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Add styling for the More work button container */
+/* More work button */
 .moreWorkButton {
   margin-top: 80px;
   display: flex;
@@ -47,15 +52,19 @@
   transition: color 0.4s;
 }
 
+/* =========================
+   Tablet
+   ========================= */
 @media (max-width: 1024px) {
   .main {
     height: auto;
-    padding: 60px 20px;
+    padding: 60px 24px;
+    margin-bottom: 0;
   }
 
-  .body {
-    width: 100%;
-    max-width: 600px;
+  .body,
+  .header {
+    max-width: 720px;
   }
 
   .moreWorkButton {
@@ -63,26 +72,35 @@
   }
 }
 
+/* =========================
+   Mobile
+   ========================= */
 @media (max-width: 768px) {
-  /* Adding proper background, padding, and spacing for mobile to prevent overlap */
   .main {
-    padding: 40px 20px 100px 20px;
+    padding: 40px 16px 80px;
     height: auto;
     min-height: auto;
-    margin-bottom: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
     background-color: #fff;
-    position: relative;
-    z-index: 2;
   }
 
-  .body {
+  .body,
+  .header {
     max-width: 100%;
-    padding: 0;
     width: 100%;
+    align-items: flex-start;
+  }
+
+  .headerLabel {
+    font-size: 12px;
+    letter-spacing: 0.04em;
   }
 
   .moreWorkButton {
-    margin-top: 60px;
-    margin-bottom: 0;
+    width: 100%;
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
   }
 }

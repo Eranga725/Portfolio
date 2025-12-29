@@ -4,6 +4,8 @@ import { useState } from "react"
 import Project from "./components_projects"
 import Modal from "./components_modal"
 import RoundedButton from "../common/RoundedButton"
+import Link from "next/link"
+
 
 const projects = [
   {
@@ -42,9 +44,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
 
-
-
-
+      <div className={styles.header}>
+      <p className={styles.headerLabel}>RECENT WORK</p></div>
       <div className={styles.body}>
         {projects.map((project, i) => (
           <Project
@@ -58,10 +59,13 @@ export default function Home() {
         ))}
 
         <div className={styles.moreWorkButton}>
+          <Link href="/work" style={{ textDecoration: 'none', color: 'inherit' }}>
           <RoundedButton>
             <p>More work</p>
           </RoundedButton>
+          </Link>  
         </div>
+        
       </div>
 
       <Modal modal={modal} projects={projects} />

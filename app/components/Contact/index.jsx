@@ -69,7 +69,7 @@ export default function CONTACT() {
                     <div>
                         <span>
                             <h3>Version</h3>
-                            <p>2022 © Edition</p>
+                            <p>2025 © Edition</p>
                         </span>
                         <span className={styles.localTime}>
                          <h3>Local Time</h3>

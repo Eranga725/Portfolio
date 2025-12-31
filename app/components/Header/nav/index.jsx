@@ -24,7 +24,7 @@ const navItems = [
   },
   {
     title: "Contact",
-    href: "#contact",
+    href: "https://cal.com/hansana-eranga-tuurkf",
   },
 ]
 

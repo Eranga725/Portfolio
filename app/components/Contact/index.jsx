@@ -6,6 +6,7 @@ import Rounded from "../common/RoundedButton"
 import { useRef, useEffect, useState } from "react"
 import { useScroll, motion, useTransform } from "framer-motion"
 import Magnetic from "../common/Magnetic"
+import Link from "next/link"
 
 export default function CONTACT() {
   const [currentTime, setCurrentTime] = useState("")
@@ -45,9 +46,11 @@ export default function CONTACT() {
           </span>
           <h2>together</h2>
           <motion.div style={{ x }} className={styles.buttonContainer}>
+          <Link href="https://cal.com/hansana-eranga-tuurkf" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Rounded backgroundColor={"#334BD3"} className={styles.button}>
               <p>Get in touch</p>
             </Rounded>
+            </Link>
           </motion.div>
           <motion.svg
             style={{ rotate, scale: 2 }}

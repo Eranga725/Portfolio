@@ -1,74 +1,96 @@
-"use client"
-import styles from "./page.module.css"
-import { useState } from "react"
-import Project from "./components_projects"
-import Modal from "./components_modal"
-import RoundedButton from "../common/RoundedButton"
-import Link from "next/link"
+"use client";
 
-
-const projects = [
-  {
-    title: "Tesbious",
-    src: "/images/Screenshot 2025-12-12 224938.png",
-    color: "#000000",
-    url: "https://www.tesbious.com/",
-    description: "Design & Development",
-  },
-  {
-    title: "sasa portfolio",
-    src: "/images/Screenshot 2025-12-12 224807.png",
-    color: "#8C8C8C",
-    url: "https://google.com",
-    description: "UI/UX Portfolio",
-  },
-  {
-    title: "stock market app",
-    src: "/images/locomotive.png",
-    color: "#EFE8D3",
-    url: "/stock-market-app",
-    description: "Finance App",
-  },
-  {
-    title: "wedd ui",
-    src: "/images/silencio.png",
-    color: "#706D63",
-    url: "/wedd-ui",
-    description: "Wedding UI Design",
-  },
-]
+import { useState } from "react";
+import styles from "./page.module.css";
+import Project from "./components_projects";
+import Modal from "./components_modal";
 
 export default function Home() {
-  const [modal, setModal] = useState({ active: false, index: 0 })
+  const [modal, setModal] = useState({ active: false, index: 0 });
+
+  const projects = [
+    {
+      title: "Tesbious",
+      category: "Development",
+      client: "TWICE",
+      location: "Spain",
+      services: "Interaction & Development",
+      year: "2024",
+      src: "/images/Screenshot 2025-12-12 224938.png",
+      url: "https://www.tesbious.com/",
+    },
+    {
+      title: "Sasa Portfolio",
+      category: "Design",
+      client: "Sasa",
+      location: "UK",
+      services: "UX/UI",
+      year: "2024",
+      src: "/images/Screenshot 2025-12-12 224807.png",
+      url: "https://google.com",
+    },
+  ];
+
+  const filters = ["All", "Design", "Development"];
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
 
   return (
     <main className={styles.main}>
+      <h1 className={styles.heroTitle}>
+        Creating next level
+        <br />
+        digital products
+      </h1>
 
-      <div className={styles.header}>
-      <p className={styles.headerLabel}>RECENT WORK</p></div>
-      <div className={styles.body}>
-        {projects.map((project, i) => (
+      <div className={styles.filters}>
+        {filters.map((f) => (
+          <button
+            key={f}
+            className={`${styles.chip} ${
+              activeFilter === f ? styles.activeChip : ""
+            }`}
+            onClick={() => setActiveFilter(f)}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+
+      {/* 🔥 Shared wrapper — everything aligns */}
+      <div className={styles.contentWrap}>
+        <div className={styles.tableHeader}>
+          <p>Client</p>
+          <p>Location</p>
+          <p>Services</p>
+          <p>Year</p>
+        </div>
+
+        {filteredProjects.map((project, i) => (
           <Project
             key={i}
             index={i}
             title={project.title}
-            description={project.description}
+            description={project.services}
             src={project.src}
             setModal={setModal}
-          />
+            url={project.url}
+          >
+            <div className={styles.row}>
+              <p>{project.client}</p>
+              <p>{project.location}</p>
+              <p>{project.services}</p>
+              <p>{project.year}</p>
+            </div>
+          </Project>
         ))}
-
-        <div className={styles.moreWorkButton}>
-          <Link href="/work" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <RoundedButton>
-            <p>More work</p>
-          </RoundedButton>
-          </Link>  
-        </div>
-        
       </div>
 
       <Modal modal={modal} projects={projects} />
     </main>
-  )
+  );
 }

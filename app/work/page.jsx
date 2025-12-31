@@ -1,6 +1,6 @@
 "use client"
 import { useEffect } from "react"
-import Projects from "../components/Projects"
+import Projects from "../components/WorkSec"
 
 export default function WorkPage() {
   useEffect(() => {
@@ -12,6 +12,7 @@ export default function WorkPage() {
 
   return (
     <main>
+
       <div style={{ minHeight: "100vh", paddingTop: "100px" }}>
         <Projects />
       </div>

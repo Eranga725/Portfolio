@@ -1,5 +1,4 @@
 "use client"
-import RoundedButton from "../../common/RoundedButton"
 import styles from "./style.module.css"
 import Image from "next/image"
 

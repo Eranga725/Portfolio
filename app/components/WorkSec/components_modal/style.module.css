@@ -1,0 +1,96 @@
+.modalContainer {
+    height: 350px;
+    width: 400px;
+    position: absolute;
+    background-color: white;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalSlider {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Cursor styles */
+.cursor, .cursorLabel {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #455CE9;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.cursorLabel {
+    background-color: transparent;
+}
+
+/* ===== RESPONSIVE MODAL ===== */
+
+/* Medium screens (tablet) */
+@media (max-width: 1024px) {
+    .modalContainer {
+        width: 300px;
+        height: 280px;
+    }
+
+    .cursor, .cursorLabel {
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+    }
+}
+
+/* Small screens (portrait phones) */
+@media (max-width: 768px) {
+    .modalContainer {
+        width: 250px;
+        height: 220px;
+    }
+
+    .cursor, .cursorLabel {
+        width: 50px;
+        height: 50px;
+        font-size: 11px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .modalContainer {
+        width: 200px;
+        height: 180px;
+    }
+
+    .cursor, .cursorLabel {
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+}

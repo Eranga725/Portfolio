@@ -1,0 +1,74 @@
+.project {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 0.5fr;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+  border-top: 1px solid #dcdcdc;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.project:last-of-type {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.project:hover {
+  opacity: 0.6;
+}
+
+/* CLIENT */
+.client h2 {
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* LOCATION / SERVICES / YEAR */
+.location p,
+.services p,
+.year p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #555;
+  text-align: left;
+}
+
+/* Align year to right like design */
+.year {
+  text-align: right;
+}
+
+/* =========================
+   TABLET & MOBILE
+   ========================= */
+
+@media (max-width: 1024px) {
+  .project {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 30px 0;
+  }
+
+  .year {
+    text-align: left;
+    color: #999;
+    font-size: 14px;
+  }
+
+  .client h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client h2 {
+    font-size: 26px;
+  }
+
+  .location p,
+  .services p {
+    font-size: 14px;
+  }
+}

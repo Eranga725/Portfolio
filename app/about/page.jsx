@@ -1,8 +1,12 @@
 "use client"
 import { useEffect } from "react"
-import Description from "../components/description"
+import Header from "../components/about_header"
+import INTRO from "../components/about_hero"
+import Grid from "../components/content_grid"
+import Contact from "../components/Contact"
 
-export default function AboutPage() {
+
+export default function WorkPage() {
   useEffect(() => {
     ;(async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default
@@ -12,8 +16,12 @@ export default function AboutPage() {
 
   return (
     <main>
+
       <div style={{ minHeight: "100vh", paddingTop: "100px" }}>
-        <Description />
+      <Header />
+      <INTRO />
+      <Grid />
+      <Contact />
       </div>
     </main>
   )

@@ -29,46 +29,6 @@ export default function Home() {
       src: "/images/Screenshot 2025-12-12 224807.png",
       url: "https://google.com",
     },
-    {
-      title: "Tesbious",
-      category: "Development",
-      client: "TWICE",
-      location: "Spain",
-      services: "Interaction & Development",
-      year: "2024",
-      src: "/images/Screenshot 2025-12-12 224938.png",
-      url: "https://www.tesbious.com/",
-    },
-    {
-      title: "Sasa Portfolio",
-      category: "Design",
-      client: "Sasa",
-      location: "UK",
-      services: "UX/UI",
-      year: "2024",
-      src: "/images/Screenshot 2025-12-12 224807.png",
-      url: "https://google.com",
-    },
-    {
-      title: "Tesbious",
-      category: "Development",
-      client: "TWICE",
-      location: "Spain",
-      services: "Interaction & Development",
-      year: "2024",
-      src: "/images/Screenshot 2025-12-12 224938.png",
-      url: "https://www.tesbious.com/",
-    },
-    {
-      title: "Sasa Portfolio",
-      category: "Design",
-      client: "Sasa",
-      location: "UK",
-      services: "UX/UI",
-      year: "2024",
-      src: "/images/Screenshot 2025-12-12 224807.png",
-      url: "https://google.com",
-    },
   ];
 
   const filters = ["All", "Design", "Development"];
@@ -81,53 +41,52 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.heroTitle}>
-        Creating next level
-        <br />
-        digital products
-      </h1>
 
-      <div className={styles.filters}>
-        {filters.map((f) => (
-          <button
-            key={f}
-            className={`${styles.chip} ${
-              activeFilter === f ? styles.activeChip : ""
-            }`}
-            onClick={() => setActiveFilter(f)}
-          >
-            {f}
-          </button>
-        ))}
-      </div>
+      {/* ⭐ SHARED CONTAINER FOR PERFECT ALIGNMENT ⭐ */}
+      <div className={styles.container}>
+        <div className={styles.headerWrap}>
+          <h1 className={styles.heroTitle}>
+            Creating next level
+            <br />
+            digital products
+          </h1>
 
-      {/* 🔥 Shared wrapper — everything aligns */}
-      <div className={styles.contentWrap}>
-        <div className={styles.tableHeader}>
-          <p>Client</p>
-          <p>Location</p>
-          <p>Services</p>
-          <p>Year</p>
+          <div className={styles.filters}>
+            {filters.map((f) => (
+              <button
+                key={f}
+                className={`${styles.chip} ${
+                  activeFilter === f ? styles.activeChip : ""
+                }`}
+                onClick={() => setActiveFilter(f)}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {filteredProjects.map((project, i) => (
-          <Project
-            key={i}
-            index={i}
-            title={project.title}
-            description={project.services}
-            src={project.src}
-            setModal={setModal}
-            url={project.url}
-          >
-            <div className={styles.row}>
-              <p>{project.client}</p>
-              <p>{project.location}</p>
-              <p>{project.services}</p>
-              <p>{project.year}</p>
-            </div>
-          </Project>
-        ))}
+        {/* TABLE CONTENT */}
+        <div className={styles.contentWrap}>
+          <div className={styles.tableHeader}>
+            <p>Client</p>
+            <p>Location</p>
+            <p>Services</p>
+            <p>Year</p>
+          </div>
+
+          {filteredProjects.map((project, i) => (
+            <Project
+              key={i}
+              index={i}
+              title={project.title}
+              description={project.services}
+              src={project.src}
+              setModal={setModal}
+              url={project.url}
+            />
+          ))}
+        </div>
       </div>
 
       <Modal modal={modal} projects={projects} />

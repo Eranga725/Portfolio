@@ -1,30 +1,43 @@
+/* ================= MAIN ================= */
 .main {
-  width: 100%;
-  min-height: auto;
+  width: auto;
   display: flex;
   flex-direction: column;
-  align-items:center;
   padding: 20px 24px 80px;
+  margin-bottom: 600px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;      /* centers container */
+}
+
+.headerWrap {
+  text-align: left;    /* keeps title & filters left-aligned */
+  margin-bottom: 30px;
 }
 
 .heroTitle {
   font-size: clamp(36px, 6vw, 82px);
   font-weight: 400;
-  text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   line-height: 1.05;
+  text-align: left;
 }
 
-/* Filter chips */
+/* ================= FILTER CHIPS ================= */
 .filters {
+  margin-top:40px;
+  margin-bottom: 70px;
   display: flex;
   gap: 16px;
-  margin-bottom: 40px;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .chip {
-  margin-bottom: 40px;
+
   padding: 10px 22px;
   border-radius: 999px;
   border: 1px solid #ddd;
@@ -43,49 +56,64 @@
   color: white;
 }
 
-/* 🔥 Shared centered wrapper — keeps everything aligned */
+/* ================= TABLE CONTENT ================= */
 .contentWrap {
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 /* Header row */
 .tableHeader {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 0.7fr;
+  margin-bottom: 20px;
   font-size: 12px;
-  letter-spacing: 0.05em;
   color: #8a8a8a;
   text-transform: uppercase;
-  margin-top: 10px;
 }
 
-/* Data rows */
-.row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr 0.7fr;
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.row p {
+/* Data rows — inherit grid from Project component */
+.row p,
+.tableHeader p {
   margin: 0;
+  text-align: left;  /* left-align text in all columns */
 }
 
-/* (Optional) match screenshot — center columns except first */
-.row p:nth-child(n+2),
-.tableHeader p:nth-child(n+2) {
-  text-align: center;
-}
+/* ================= RESPONSIVE ================= */
 
-/* Mobile — hide table layout */
+/* Tablet */
 @media (max-width: 1024px) {
-  .tableHeader {
-    display: none;
+  .heroTitle {
+    font-size: clamp(28px, 5vw, 54px);
   }
 
-  .row {
+  .chip {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main {
+    padding: 16px 18px 60px;
+  }
+
+  .heroTitle {
+    font-size: clamp(24px, 6vw, 40px);
+    margin-bottom: 20px;
+  }
+
+  .filters {
+    gap: 10px;
+  }
+
+  .chip {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  /* Hide table header */
+  .tableHeader {
     display: none;
   }
 }

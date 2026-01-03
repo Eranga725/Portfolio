@@ -24,7 +24,6 @@ export default function WorkPage() {
       <Grid />
       <NEXT />
       <Contact />
-
       </div>
     </main>
   )

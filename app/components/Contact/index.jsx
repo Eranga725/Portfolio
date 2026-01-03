@@ -17,7 +17,6 @@ export default function CONTACT() {
     offset: ["start end", "end end"],
   })
   const x = useTransform(scrollYProgress, [0, 1], [0, 100])
-  const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
 
   useEffect(() => {
@@ -35,7 +34,7 @@ export default function CONTACT() {
   }, [])
 
   return (
-    <motion.div id="contact" style={{ y }} ref={container} className={styles.contact}>
+    <motion.div id="contact" ref={container} className={styles.contact}>
       <div className={styles.body}>
         <div className={styles.title}>
           <span>

@@ -4,6 +4,7 @@ import Header from "../components/about_header"
 import INTRO from "../components/about_hero"
 import Grid from "../components/content_grid"
 import Contact from "../components/Contact"
+import NEXT from "../components/image_devider"
 
 
 export default function WorkPage() {
@@ -21,7 +22,9 @@ export default function WorkPage() {
       <Header />
       <INTRO />
       <Grid />
+      <NEXT />
       <Contact />
+
       </div>
     </main>
   )

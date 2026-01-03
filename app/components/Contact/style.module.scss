@@ -272,3 +272,152 @@
     font-size: 1em;
   }
 }
+
+@media (max-width: 1400px) {
+  .contact .body {
+    max-width: 1200px;
+  }
+
+  .contact .body .title {
+    margin-left: 140px;
+    margin-right: 140px;
+  }
+
+  .contact .body .title h2 {
+    font-size: 4.5vw;
+  }
+
+  .contact .body .title .buttonContainer {
+    left: calc(100% - 340px);
+    top: calc(100% - 95px);
+  }
+
+  .contact .body .title .buttonContainer .button {
+    width: 160px;
+    height: 160px;
+  }
+
+  .contact .body .nav {
+    margin-left: 140px;
+    margin-right: 140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact .body {
+    max-width: 1000px;
+  }
+
+  .contact .body .title {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .contact .body .title h2 {
+    font-size: 4.8vw;
+  }
+
+  .contact .body .title .buttonContainer {
+    left: calc(100% - 300px);
+    top: calc(100% - 90px);
+  }
+
+  .contact .body .title .buttonContainer .button {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact .body .nav {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact .body {
+    padding-top: 120px;
+    max-width: 900px;
+  }
+
+  .contact .body .title {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .contact .body .title h2 {
+    font-size: 6vw;
+  }
+
+  .contact .body .title .buttonContainer {
+    left: calc(100% - 260px);
+    top: calc(100% - 85px);
+  }
+
+  .contact .body .title .buttonContainer .button {
+    width: 130px;
+    height: 130px;
+  }
+
+  .contact .body .nav {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .contact .body {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .contact .body .title {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 30px;
+  }
+
+  .contact .body .title h2 {
+    font-size: 10vw;
+  }
+
+  .contact .body .title span .imageContainer {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact .body .title .buttonContainer {
+    right: 60px;
+    top: calc(100% - 60px);
+  }
+
+  .contact .body .title .buttonContainer .button {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact .body .title .buttonContainer .button p {
+    font-size: 12px;
+  }
+
+  .contact .body .nav {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 40px;
+    gap: 10px;
+  }
+
+  .contact .body .info {
+    margin-top: 40px;
+    padding: 0 15px 30px 15px;
+    gap: 20px;
+  }
+
+  .contact .body .info div h3 {
+    font-size: 0.65em;
+  }
+
+  .contact .body .info div p {
+    font-size: 0.95em;
+  }
+}

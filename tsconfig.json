@@ -36,7 +36,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "types" // ✅ Add this line
-, "app/components/about_header/index.jsx", "app/components/image_devider/index.jsx"  ],
+, "app/components/about_header/index.tsx", "app/components/image_devider/index.jsx"  ],
   "exclude": [
     "node_modules"
   ]

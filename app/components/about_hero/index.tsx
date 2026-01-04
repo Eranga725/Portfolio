@@ -20,19 +20,23 @@ export default function HeroSection() {
     <section ref={containerRef} className={styles.hero}>
       {/* Left content */}
       <div className={styles.content}>
-        <p className={styles.text}>
-        Hi, I’m Hansana Eranga.
-        I’m a data science student and an aspiring AI engineer who enjoys building smart and meaningful tech solutions.
-        </p>
+      <p className={styles.text}>
+      Hi, I’m Hansana Eranga.
+      A data science student passionate about UI/UX, full-stack development,
+      and building AI-driven solutions.
+      </p>
 
-        <p className={styles.subText}>I work with data, machine learning, and web technologies</p>
+      <p className={styles.subText}>
+        Design • Development • Data • AI
+      </p>
+
       </div>
 
       {/* Right image with parallax */}
       <div className={styles.imageWrapper}>
         <motion.div style={{ y }} className={styles.imageInner}>
           <Image
-            src="/images/Screenshot 2025-12-12 224938.png"
+            src="/images/Generated Image October 19, 2025 - 5_17PM.png"
             alt="City portrait"
             fill
             priority

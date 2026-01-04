@@ -12,27 +12,22 @@ export default function Services() {
       <div className={styles.grid}>
         <div className={styles.card}>
           <span className={styles.number}>01</span>
-          <h3 className={styles.title}>Design</h3>
-          <p>
-            With a solid track record in designing websites, I deliver strong and
-            user-friendly digital designs.
-          </p>
+          <h3 className={styles.title}>UI / UX Design</h3>
+          <p>Thoughtful and user-centered design that turns ideas into clear digital experiences.</p>
         </div>
 
         <div className={styles.card}>
           <span className={styles.number}>02</span>
-          <h3 className={styles.title}>Development</h3>
+          <h3 className={styles.title}>Web Development</h3>
           <p>
-            I build scalable websites with a focus on interaction and motion.
+          Modern, scalable applications built with performance, interaction, and maintainability in mind.
           </p>
         </div>
 
         <div className={styles.card}>
           <span className={styles.number}>03</span>
-          <h3 className={styles.title}>The full package</h3>
-          <p>
-            From concept to implementation — I deliver  digital products.
-          </p>
+          <h3 className={styles.title}>AI & Data Science</h3>
+          <p>From data analysis to machine learning models, I build systems that learn and make smarter decisions.</p>
         </div>
       </div>
     </section>

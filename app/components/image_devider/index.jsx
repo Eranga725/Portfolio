@@ -9,7 +9,7 @@ export default function AwwwardsSection() {
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/images/Screenshot 2025-12-12 224938.png"      // change to your image path
+            src="/images/483999103_1069137451899606_7114671614680677285_n.jpg"      // change to your image path
             alt="Awwwards judge"
             fill
             className={styles.image}
@@ -19,14 +19,12 @@ export default function AwwwardsSection() {
         <div className={styles.content}>
 
           <h2 className={styles.title}>
-            Awwwards <br /> judge '19–25
+          Volunteering & 
+          <br /> Impact
           </h2>
 
           <p className={styles.text}>
-            I am a proud member of the Awwwards International Jury, where I judge
-            the best websites in the world using my expertise as a designer and
-            developer. Micro animations and transitions have my full attention
-            and get me thrilled with every move.
+          Actively contributed to student initiatives, including improving digital platforms and organizing events at SLTC’s IEEE Computer Society as a former webmaster. These experiences strengthened my collaboration, design, and technical skills while giving back to the community.
           </p>
         </div>
       </div>

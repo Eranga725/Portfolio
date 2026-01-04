@@ -27,9 +27,7 @@ export default function Home() {
       <div className={styles.container}>
         <div className={styles.headerWrap}>
           <h1 className={styles.heroTitle}>
-            Helping brands thrive
-            <br />
-            in the digital world
+          Designing and developing data-driven digital solutions
           </h1>
         </div>
         </div>

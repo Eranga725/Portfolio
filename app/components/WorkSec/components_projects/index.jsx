@@ -1,7 +1,14 @@
 "use client"
 import styles from "./style.module.css"
 
-export default function Project({ title, description, index, setModal }) {
+export default function Project({
+  title,
+  description,
+  location,
+  year,
+  index,
+  setModal,
+}) {
   return (
     <div
       className={styles.project}
@@ -14,9 +21,9 @@ export default function Project({ title, description, index, setModal }) {
         <h2>{title}</h2>
       </div>
 
-      {/* LOCATION */}
+      {/* LOCATION / TECH STACK */}
       <div className={styles.location}>
-        <p>Spain</p>
+        <p>{location}</p> {/* ✅ dynamic */}
       </div>
 
       {/* SERVICES */}
@@ -26,7 +33,7 @@ export default function Project({ title, description, index, setModal }) {
 
       {/* YEAR */}
       <div className={styles.year}>
-        <p>2024</p>
+        <p>{year}</p> {/* ✅ dynamic */}
       </div>
     </div>
   )

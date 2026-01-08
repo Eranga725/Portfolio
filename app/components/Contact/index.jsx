@@ -39,13 +39,13 @@ export default function CONTACT() {
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image fill={true} alt={"image"} src={`/images/background.jpg`} />
+              <Image fill={true} alt={"image"} src={`/images/background.png`} />
             </div>
             <h2>Let&apos;s work</h2>
           </span>
           <h2>together</h2>
           <motion.div style={{ x }} className={styles.buttonContainer}>
-          <Link href="https://cal.com/hansana-eranga-tuurkf" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link href="https://cal.com/hansana-eranga-tuurkf/30min?overlayCalendar=true" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Rounded backgroundColor={"#334BD3"} className={styles.button}>
               <p>Get in touch</p>
             </Rounded>
@@ -87,15 +87,27 @@ export default function CONTACT() {
           <div>
             <span>
               <h3>socials</h3>
-              <Magnetic>
-                <p>Linkedin</p>
+              <Magnetic>                
+              <Link href="https://www.linkedin.com/in/hansana-eranga-22500123a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsw5N%2FYdSSrCziazqaSunEA%3D%3D" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <p>Linkedin</p>
+              </Link>
               </Magnetic>
             </span>
             <Magnetic>
-              <p>Instagram</p>
+            <Link href="https://github.com/Eranga725" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <p>Github</p>
+              </Link>
             </Magnetic>
             <Magnetic>
-              <p>Dribbble</p>
+            <Link href="https://www.behance.net/hansanaeranga" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <p>Behance</p>
+              </Link>
+            </Magnetic>
+            
+            <Magnetic>
+            <Link href="https://www.instagram.com/hansanaeranga/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <p>Instagram</p>
+              </Link>
             </Magnetic>
           </div>
         </div>

@@ -50,8 +50,8 @@ export default function Landing() {
 
             <div className={styles.sliderContainer}>
                 <div ref={slider} className={styles.slider}>
-                    <p ref={firstText}>UI/UX Developer - </p>
-                    <p ref={secondText}>UI/UX Developer - </p>
+                    <p ref={firstText}>Hansana Eranga - </p>
+                    <p ref={secondText}>Hansana Eranga - </p>
                 </div>
             </div>
 

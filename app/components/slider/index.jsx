@@ -6,38 +6,38 @@ import Image from 'next/image';
 const slider1 = [
     {
         color: "#e3e5e7",
-        src: "c2.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     },
     {
         color: "#d6d7dc",
-        src: "decimal.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     },
     {
         color: "#e3e3e3",
-        src: "funny.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     },
     {
         color: "#21242b",
-        src: "google.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     }
 ]
 
 const slider2 = [
     {
         color: "#d4e3ec",
-        src: "maven.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     },
     {
         color: "#e5e0e1",
-        src: "panda.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     },
     {
         color: "#d7d4cf",
-        src: "powell.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     },
     {
         color: "#e1dad6",
-        src: "wix.jpg"
+        src: "/images/macbook-16-pro-mockup-on-concrete-background-front-view.png"
     }
 ]
 

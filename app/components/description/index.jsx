@@ -3,6 +3,7 @@ import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './anim';
 import Rounded from '../common/RoundedButton';
+import Link from 'next/link';
 
 export default function DESCRIPTION() {
 
@@ -21,9 +22,12 @@ export default function DESCRIPTION() {
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Designing and building intelligent digital experiences that perform, scale, and stand out. </motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
+                    
+                <Link href="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Rounded className={styles.button}>
                         <p>About me</p>
                     </Rounded>
+                    </Link>
                 </div>
             </div>
         </div>

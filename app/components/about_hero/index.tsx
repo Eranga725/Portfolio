@@ -37,7 +37,7 @@ export default function HeroSection() {
         <motion.div style={{ y }} className={styles.imageInner}>
           <Image
             src="/images/Generated Image October 19, 2025 - 5_17PM.png"
-            alt="City portrait"
+            alt="Hansana Eranga"
             fill
             priority
             className={styles.image}

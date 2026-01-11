@@ -15,9 +15,6 @@ export default function index() {
             <Link href="https://www.behance.net/hansanaeranga" style={{ textDecoration: 'none', color: 'inherit' }}>
               <p>Behance</p>
               </Link>
-            <Link href="https://www.instagram.com/hansanaeranga/" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Instagram</p>
-              </Link>
     </div>
   )
 }

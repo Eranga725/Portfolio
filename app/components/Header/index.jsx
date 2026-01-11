@@ -90,7 +90,7 @@ export default function Header() {
 
           <Magnetic>
             <div className={styles.el}>
-              <a href="https://cal.com/hansana-eranga-tuurkf" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</a>
+              <a href="https://cal.com/hansana-eranga-tuurkf/30min?overlayCalendar=true" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</a>
               <div className={styles.indicator} />
             </div>
           </Magnetic>

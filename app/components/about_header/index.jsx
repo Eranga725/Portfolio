@@ -38,7 +38,7 @@ export default function Home() {
           
  
           <motion.div style={{ x }} className={styles.buttonContainer}>
-          <Link href="https://cal.com/hansana-eranga-tuurkf" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link href="https://drive.google.com/file/d/1Br0QZRL_1ULVnipkCiBbfYxYBq8sv09b/view?usp=sharing" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Rounded backgroundColor={"#334BD3"} className={styles.button}>
               <p>Resume</p>
             </Rounded>
